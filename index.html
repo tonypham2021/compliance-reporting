@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>ECU Compliance Reporting</title>
 </head>
 <body>
@@ -13,6 +14,7 @@
     </header>
     <main>
         <section>
+            <p>Please choose a report to make a schedule</p>
             <input type="checkbox" name="malware-detections" id="malware-detections">
             <label for="malware-detections">Malware Detections Report</label><br />
             <input type="checkbox" name="spoofed-domains" id="spoofed-domains">
@@ -37,8 +39,26 @@
             <label for="ad-fs-endpoints">AD FS endpoints monitoring</label><br />
             <input type="checkbox" name="suspicious-ip" id="suspicious-ip">
             <label for="suspicious-ip">Suspicious IP address monitoring</label><br />
-            <button>Schedule</button>
+            <button id="schedule-btn">Schedule</button>
         </section>
+        <div id="schedule-modal">
+            <p>Please choose a start date, end date and frequency of a report</p>
+            <label for="start-date">Start Date</label>
+            <input type="text" name="start-date" id="start-date"><br />
+            <label for="end-date">End Date</label>
+            <input type="text" name="end-date" id="end-date"><br />
+            <input type="checkbox" name="daily" id="daily">
+            <label for="daily">Daily</label><br />
+            <input type="checkbox" name="weekly" id="weekly">
+            <label for="weekly">Weekly</label><br />
+            <input type="checkbox" name="bi-weekly" id="bi-weekly">
+            <label for="bi-weekly">Bi-weekly</label><br />
+            <input type="checkbox" name="monthly" id="monthly">
+            <label for="monthly">Monthly</label><br />
+            <label for="send-to">Send to: </label>
+            <input type="text" name="send-to" id="send-to"><br />
+            <button>Save</button>
+        </div>
     </main>
     <footer>
         <h2>Relevant Links</h2>
@@ -46,4 +66,5 @@
         <a href="https://protection.office.com/insightdashboard%60">Microsoft 365 Admin Center</a>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
